@@ -13,13 +13,6 @@ namespace PostmanCloneUI
 
         private async void requestButton_Click(object sender, EventArgs e)
         {   
-            // TODO: Add API URL Validation
-            if (requestField.Text == "")
-            {
-                responseWindow.Text = "Please enter a valid URL";
-                statusLabel.Text = "Error"; 
-            }
-
             
             try
             {
