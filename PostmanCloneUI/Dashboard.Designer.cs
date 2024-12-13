@@ -101,9 +101,9 @@
             // 
             statusStrip.ImageScalingSize = new Size(20, 20);
             statusStrip.Items.AddRange(new ToolStripItem[] { statusLabel });
-            statusStrip.Location = new Point(0, 884);
+            statusStrip.Location = new Point(0, 804);
             statusStrip.Name = "statusStrip";
-            statusStrip.Size = new Size(1700, 38);
+            statusStrip.Size = new Size(1723, 38);
             statusStrip.TabIndex = 5;
             statusStrip.Text = "statusStrip1";
             // 
@@ -129,7 +129,7 @@
             AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(10, 10, 35);
-            ClientSize = new Size(1700, 922);
+            ClientSize = new Size(1723, 842);
             Controls.Add(responseLabel);
             Controls.Add(statusStrip);
             Controls.Add(requestButton);
@@ -141,6 +141,7 @@
             Margin = new Padding(6);
             Name = "Dashboard";
             Text = "Postman Clone";
+            WindowState = FormWindowState.Minimized;
             statusStrip.ResumeLayout(false);
             statusStrip.PerformLayout();
             ResumeLayout(false);
