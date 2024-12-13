@@ -42,6 +42,7 @@
             // responseWindow
             // 
             responseWindow.BackColor = Color.FromArgb(27, 27, 50);
+            responseWindow.ForeColor = Color.White;
             responseWindow.Location = new Point(50, 358);
             responseWindow.Multiline = true;
             responseWindow.Name = "responseWindow";
@@ -76,6 +77,7 @@
             // 
             requestField.BackColor = Color.FromArgb(27, 27, 50);
             requestField.Font = new Font("Segoe UI", 18F);
+            requestField.ForeColor = Color.White;
             requestField.Location = new Point(186, 183);
             requestField.Margin = new Padding(10);
             requestField.MinimumSize = new Size(0, 50);
