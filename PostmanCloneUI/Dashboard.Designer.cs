@@ -1,6 +1,6 @@
 ﻿namespace PostmanCloneUI
 {
-    partial class dashboard
+    partial class Dashboard
     {
         /// <summary>
         ///  Required designer variable.
@@ -34,8 +34,8 @@
             requestField = new TextBox();
             requestButton = new Button();
             statusStrip = new StatusStrip();
-            responseLabel = new Label();
             statusLabel = new ToolStripStatusLabel();
+            responseLabel = new Label();
             statusStrip.SuspendLayout();
             SuspendLayout();
             // 
@@ -45,6 +45,7 @@
             responseWindow.Location = new Point(50, 358);
             responseWindow.Multiline = true;
             responseWindow.Name = "responseWindow";
+            responseWindow.ReadOnly = true;
             responseWindow.Size = new Size(1608, 415);
             responseWindow.TabIndex = 0;
             // 
@@ -94,6 +95,7 @@
             requestButton.TabIndex = 4;
             requestButton.Text = "Send";
             requestButton.UseVisualStyleBackColor = false;
+            requestButton.Click += requestButton_Click;
             // 
             // statusStrip
             // 
@@ -105,6 +107,13 @@
             statusStrip.TabIndex = 5;
             statusStrip.Text = "statusStrip1";
             // 
+            // statusLabel
+            // 
+            statusLabel.Font = new Font("Segoe UI", 14F);
+            statusLabel.Name = "statusLabel";
+            statusLabel.Size = new Size(78, 32);
+            statusLabel.Text = "Ready";
+            // 
             // responseLabel
             // 
             responseLabel.AutoSize = true;
@@ -115,14 +124,7 @@
             responseLabel.TabIndex = 6;
             responseLabel.Text = "Response";
             // 
-            // statusLabel
-            // 
-            statusLabel.Font = new Font("Segoe UI", 14F);
-            statusLabel.Name = "statusLabel";
-            statusLabel.Size = new Size(78, 32);
-            statusLabel.Text = "Ready";
-            // 
-            // dashboard
+            // Dashboard
             // 
             AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -137,7 +139,7 @@
             Controls.Add(responseWindow);
             Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(6);
-            Name = "dashboard";
+            Name = "Dashboard";
             Text = "Postman Clone";
             statusStrip.ResumeLayout(false);
             statusStrip.PerformLayout();
