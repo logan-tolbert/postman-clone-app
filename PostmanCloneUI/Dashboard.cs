@@ -1,7 +1,11 @@
+using PostmanCloneLibrary;
+using System.CodeDom.Compiler;
+
 namespace PostmanCloneUI
 {
     public partial class Dashboard : Form
     {
+        private readonly ApiAccess api = new ApiAccess();
         public Dashboard()
         {
             InitializeComponent();
@@ -13,8 +17,7 @@ namespace PostmanCloneUI
             if (requestField.Text == "")
             {
                 responseWindow.Text = "Please enter a valid URL";
-                statusLabel.Text = "Error";
-                return;
+                statusLabel.Text = "Error"; 
             }
 
             
@@ -22,8 +25,7 @@ namespace PostmanCloneUI
             {
                 statusLabel.Text = "Requesting....";
 
-                //TODO: Add API call
-                await Task.Delay(2000);
+                responseWindow.Text = await api.CallApiAsync(requestField.Text);
 
                 statusLabel.Text = "Ready";
             }
@@ -31,7 +33,7 @@ namespace PostmanCloneUI
             {
                 responseWindow.Text = "Error: " + ex.Message;
                 statusLabel.Text = "Error";
-                return;
+               
             }
         }
     }
